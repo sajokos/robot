@@ -1,6 +1,6 @@
 ***Settings***
 Library     SeleniumLibrary
-Library     Dialogs
+#Library     Dialogs
 
 ***Variables***
 
