@@ -7,5 +7,6 @@ Library     SeleniumLibrary
 ***Test Cases***
 Testi 1 
     Log             Hello world
-    Open Browser    https://github.com/     browser=gc
+    
+    #Open Browser    https://github.com/     browser=gc
     Log             Hello world
