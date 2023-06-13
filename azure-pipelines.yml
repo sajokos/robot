@@ -28,15 +28,12 @@ jobs:
 
   - powershell: pip list
     displayName: 'list version1'
-  
-  - script: pip uninstall selenium
-    displayName: 'Ininstall selenium'
 
-  - script: pip install selenium==4.9
+  - script: pip install selenium==4.9.0
     displayName: 'install older'
-  
+
   - powershell: pip list
     displayName: 'list version2'
-    
+
   - powershell: robot --pythonpath . -d .\ -x outputxunit.xml testi.robot
     displayName: 'Run Robot Scripts'
