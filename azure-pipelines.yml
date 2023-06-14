@@ -23,8 +23,14 @@ jobs:
       versionSpec: '$(python.version)'
       architecture: 'x64'
 
-  - script: pip install robotframework robotframework-seleniumlibrary && npm install chromedriver
+  - script: pip install robotframework robotframework-seleniumlibrary==6.0.0 && npm install chromedriver --detect_chromedriver_version
     displayName: 'Install dependencies'
-  
+
+  - script: pip install selenium==4.9.0
+    displayName: 'install selenium==4.9.0'
+
+  - powershell: pip list
+    displayName: 'List version'
+
   - powershell: robot --pythonpath . -d .\ -x outputxunit.xml testi.robot
     displayName: 'Run Robot Scripts'
